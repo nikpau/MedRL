@@ -4,9 +4,7 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from torchrl.envs.utils import set_exploration_type, ExplorationType
 
-from relapse.train.relapse_train import actor
-from relapse.env.relapse_env import env
-
+from relapse.train.relapse_train import actor, env
 
 def validate(path_to_actor: str):
     valenv = env
