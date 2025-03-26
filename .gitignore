@@ -1,0 +1,6 @@
+build/
+resplots/
+.vscode/
+*.pyc
+*.pyo
+*.png

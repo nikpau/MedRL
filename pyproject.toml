@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relapse"
+version = "0.1.0"
+description = "Reinforcement learning for medical relapse prediction using reinforcement learning"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Niklas Paulig"}
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "torchrl",
+    "tensordict",
+    "gym",
+    "numpy",
+    "matplotlib",
+    "tqdm",
+    "scipy",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+# Scripts
+[project.scripts]
+relapse = "relapse.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
