@@ -3,7 +3,7 @@ import argparse
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--train",action="store_true",help="Train the model")
-    parser.add_argument("-v","--validate",type=bool,help="Validate the model")
+    parser.add_argument("-v","--validate",action="store_true",help="Validate the model")
     parser.add_argument("-w","--weights",type=str,help="Path to the weights file")
     args = parser.parse_args()
 
